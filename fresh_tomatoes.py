@@ -1,8 +1,13 @@
+""" This module represents the view of the page.
+
+The module supplies two functions, create_movie_tiles_content() and open_movies_page().
+Both functions take a list of movies as their argument.
+"""
+
 import webbrowser
 import os
 import re
 
-__author__ = 'lauramooney'
 
 # Styles and scripting for the page
 main_page_head = '''
@@ -145,6 +150,10 @@ movie_tile_content = '''
 
 
 def create_movie_tiles_content(movies):
+    """
+    :param movies: array
+    :return: html content for each movie
+    """
     # The HTML content for this section of the page
     content = ''
     for movie in movies:
@@ -173,6 +182,10 @@ def create_movie_tiles_content(movies):
 
 
 def open_movies_page(movies):
+    """
+    :param movies:  array
+    :return: rendered list of movies from the module entertainment_center.py
+    """
     # Create or overwrite the output file
     output_file = open('fresh_tomatoes.html', 'w')
 
